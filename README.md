@@ -1,6 +1,8 @@
 # Crystal-Ball
 Code for Mainz Crystal Ball detector
-//#include "LPD8806.h"
+
+
+//#include "LPD8806.h" REMOVE DASHES WHEN PUT IN ARDUINO SKETCH
 //#include "SPI.h"
 int dataPin = 4;
 int clockPin = 3;
