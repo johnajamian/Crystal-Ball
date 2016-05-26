@@ -1,2 +1,34 @@
 # Crystal-Ball
 Code for Mainz Crystal Ball detector
+#include "LPD8806.h"
+#include "SPI.h"
+int dataPin = 4;
+int clockPin = 3;
+LPD8806 strip = LPD8806(//# of LEDs//, dataPin, clockPin);
+
+void setup() {
+  strip.begin() //starts LED strip
+  strip.show()// turns all off
+}
+  // function prototypes, do not remove these!
+  void colorChase(uint32_t c, uint8_t wait);
+  void colorWipe(uint32_t c, uint8_t wait);
+  void dither(uint32_t c, uint8_t wait);
+  void scanner(uint8_t r, uint8_t g, uint8_t b, uint8_t wait);
+  void wave(uint32_t c, int cycles, uint8_t wait);
+  void rainbowCycle(uint8_t wait);
+  uint32_t Wheel(uint16_t WheelPos);
+  
+  int i;
+  i = 1
+  //Light each LED for 1 second then move to the next
+void loop(){      
+  for( i=1; i<=32; i++){
+  strip.setPixelColor(i, 127,0,0); //Color may be wrong
+  strip.show();
+  delay(1000);
+  strip.setPixelColor(i, 0);
+  }
+  
+  
+}
