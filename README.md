@@ -1,7 +1,7 @@
 # Crystal-Ball
 Code for Mainz Crystal Ball detector
-#include "LPD8806.h"
-#include "SPI.h"
+//#include "LPD8806.h"
+//#include "SPI.h"
 int dataPin = 4;
 int clockPin = 3;
 LPD8806 strip = LPD8806(//# of LEDs//, dataPin, clockPin);
